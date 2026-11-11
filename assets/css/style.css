@@ -1,6 +1,6 @@
 /* ============================================================
-   O PREÇO CAIU - STYLESHEET
-   Design Fiel ao Modelo Solicitado, 12 Cards em Grid & Seguro
+   O PREÇO CAIU - OFFICIAL STYLESHEET
+   High-Conversion, Responsive Category List & Hardened Security Profile
    ============================================================ */
 
 :root {
@@ -36,7 +36,9 @@
   --radius-full: 9999px;
 }
 
-/* Reset */
+/* ============================================================
+   CSS RESET & GLOBAL BASE STYLES
+   ============================================================ */
 *, *::before, *::after {
   margin: 0;
   padding: 0;
@@ -84,7 +86,7 @@ button {
 }
 
 /* ============================================================
-   TOP BAR & TICKER
+   TOP BAR & DEALS TICKER
    ============================================================ */
 .topbar {
   background: var(--primary-dark);
@@ -116,7 +118,7 @@ button {
   letter-spacing: 0.5px;
 }
 
-/* Deals Ticker */
+/* Dynamic Price Drops Ticker */
 .deals-ticker {
   background: #06341F;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
@@ -177,7 +179,7 @@ button {
 }
 
 /* ============================================================
-   HERO COM LOGO 400x400
+   HERO SECTION WITH 1:1 SQUARE BRAND BADGE
    ============================================================ */
 .hero {
   position: relative;
@@ -205,7 +207,7 @@ button {
   z-index: 2;
 }
 
-/* Logo Header Quadrado e Proporcional */
+/* Compact Proportional 1:1 Square Brand Logo Badge */
 .hero-brand {
   display: flex;
   justify-content: center;
@@ -241,7 +243,7 @@ button {
   display: block;
 }
 
-/* Live Members Pill */
+/* Real-Time Community Count Pill */
 .hero-live-pill {
   display: inline-flex;
   align-items: center;
@@ -282,7 +284,7 @@ button {
   100% { transform: scale(1); opacity: 0; }
 }
 
-/* Headline */
+/* Primary Hero Headline */
 .hero h1 {
   font-family: var(--font-heading);
   font-weight: 800;
@@ -309,7 +311,7 @@ button {
   line-height: 1.5;
 }
 
-/* Steps */
+/* Onboarding Step Badges */
 .hero-steps {
   display: flex;
   justify-content: center;
@@ -345,7 +347,7 @@ button {
 }
 
 /* ============================================================
-   SEÇÃO DE GRUPOS EM FORMATO DE LISTA
+   CATEGORY LIST SECTION (12 SEGMENTED GROUPS)
    ============================================================ */
 .groups-section {
   padding: 34px 0 56px;
@@ -395,7 +397,7 @@ button {
   font-size: 15px;
 }
 
-/* Lista Vertical dos 12 Grupos */
+/* Vertical List Layout for 12 Groups */
 .group-list {
   max-width: 820px;
   margin: 24px auto 0;
@@ -404,7 +406,7 @@ button {
   gap: 12px;
 }
 
-/* Cada Item da Lista */
+/* Individual Row Card Item */
 .group-item {
   display: flex;
   align-items: center;
@@ -449,7 +451,7 @@ button {
   transform: translateY(0);
 }
 
-/* Ícone / Imagem na Lista */
+/* Category Thumbnail Box */
 .group-thumb-box {
   width: 58px;
   height: 58px;
@@ -470,7 +472,7 @@ button {
   display: block;
 }
 
-/* Textos da Categoria */
+/* Category Title & Description Typography */
 .group-txt {
   flex: 1;
   line-height: 1.3;
@@ -493,7 +495,7 @@ button {
   margin-top: 2px;
 }
 
-/* Botão Verde ENTRAR */
+/* Vibrant Green Enter WhatsApp CTA */
 .btn-enter {
   display: inline-flex;
   align-items: center;
@@ -525,7 +527,7 @@ button {
 }
 
 /* ============================================================
-   REASSURANCE & METRICS
+   REASSURANCE & TRUST SIGNALS
    ============================================================ */
 .reassure {
   background: #ffffff;
@@ -573,7 +575,9 @@ button {
   display: block;
 }
 
-/* FAQ */
+/* ============================================================
+   ACCESSIBLE FAQ ACCORDION SECTION
+   ============================================================ */
 .faq-sec {
   padding: 44px 0 56px;
   background: #F0FDF4;
@@ -663,7 +667,7 @@ button {
 }
 
 /* ============================================================
-   FOOTER
+   FOOTER SECTION
    ============================================================ */
 footer {
   background: #092617;
@@ -717,7 +721,7 @@ footer {
 }
 
 /* ============================================================
-   RESPONSIVIDADE
+   RESPONSIVE LAYOUT & MEDIA QUERIES
    ============================================================ */
 @keyframes fadeDown {
   from { opacity: 0; transform: translateY(-10px); }
@@ -725,9 +729,6 @@ footer {
 }
 
 @media (max-width: 960px) {
-  .cat-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
   .re-grid {
     grid-template-columns: repeat(2, 1fr);
   }

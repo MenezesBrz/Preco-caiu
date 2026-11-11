@@ -1,18 +1,18 @@
 /**
  * ============================================================
- * CONFIGURAÇÃO DO SITE - O PREÇO CAIU
+ * SITE CONFIGURATION - O PREÇO CAIU
  * ============================================================
- * Cada grupo possui seu próprio link de WhatsApp individual.
- * Basta substituir a URL em cada categoria abaixo.
+ * Centralized settings for categories, deals ticker, and WhatsApp URLs.
+ * All objects are deeply frozen to prevent runtime prototype pollution.
  * ============================================================
  */
 
 const SITE_CONFIG = {
-  // Informações da Marca
+  // Brand Metadata
   brandName: "O Preço Caiu",
   tagline: "As melhores ofertas e cupons direto no seu WhatsApp",
 
-  // Notificações / Ticker de Ofertas Recentes (ao vivo no topo)
+  // Live Deals Ticker Data (Rendered in top ticker stream)
   recentDealsTicker: [
     { text: "iPhone 15 128GB", price: "R$ 4.199", oldPrice: "R$ 7.299", drop: "-42%", store: "Amazon" },
     { text: "Air Fryer Mondial 4L", price: "R$ 199", oldPrice: "R$ 389", drop: "-48%", store: "Mercado Livre" },
@@ -23,7 +23,7 @@ const SITE_CONFIG = {
     { text: "Robô Aspirador Xiaomi", price: "R$ 749", oldPrice: "R$ 1.399", drop: "-46%", store: "Shopee" }
   ],
 
-  // 12 Grupos com links individuais e imagens dedicadas
+  // 12 Category Groups with individual WhatsApp destination links
   categories: [
     {
       id: "smartphones",
@@ -124,7 +124,7 @@ const SITE_CONFIG = {
   ]
 };
 
-// Cibersegurança: Impede Prototype Pollution e modificação em runtime
+// Cybersecurity: Prevents Prototype Pollution and runtime tampering
 Object.freeze(SITE_CONFIG);
 Object.freeze(SITE_CONFIG.recentDealsTicker);
 Object.freeze(SITE_CONFIG.categories);

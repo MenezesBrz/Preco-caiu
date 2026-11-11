@@ -1,32 +1,32 @@
 /**
  * ============================================================
- * O PREÇO CAIU - MÓDULO DE CIBERSEGURANÇA (DEFENSE-IN-DEPTH)
+ * O PREÇO CAIU - CYBERSECURITY ENGINE (DEFENSE-IN-DEPTH)
  * ============================================================
- * Proteções ativas:
- * 1. Anti-Clickjacking (Frame-busting)
- * 2. Prevenção de XSS e JS Injection (DOM & Reflected)
- * 3. Sanitização contra injeções SQL e Path Traversal em parâmetros
- * 4. Validação estrita de URLs de redirecionamento (Anti-Open Redirect)
- * 5. Proteção contra Prototype Pollution
+ * Active Security Controls:
+ * 1. Anti-Clickjacking & UI Redressing (Frame-busting)
+ * 2. XSS & JavaScript Injection Defense (DOM & Reflected)
+ * 3. Client-side SQL Injection & Path Traversal Query Auditor
+ * 4. Strict Protocol & Scheme Whitelisting (Anti-Open Redirect)
+ * 5. Prototype Pollution Protection (Object Immutability)
  * ============================================================
  */
 
 (function () {
   'use strict';
 
-  // 1. ANTI-CLICKJACKING (Impede que o site seja inserido em iframes maliciosos)
+  // 1. ANTI-CLICKJACKING (Prevents execution within malicious third-party iframes)
   try {
     if (window.top !== window.self) {
       window.top.location = window.self.location;
     }
   } catch (e) {
-    // Caso haja bloqueio de cross-origin, esconde o conteúdo
+    // If cross-origin framing blocks window.top access, hide document to prevent clickjacking
     if (document.documentElement) {
       document.documentElement.style.display = 'none';
     }
   }
 
-  // 2. DETECTOR E SANITIZADOR DE INJEÇÃO SQL & XSS NA URL (Query Params & Hash)
+  // 2. SQL INJECTION & XSS URL AUDITOR (Scans query parameters and hash fragments)
   const SQLI_PATTERNS = [
     /(\%27)|(\')|(\-\-)|(\%23)|(#)/i,
     /((\%3D)|(=))[^\n]*((\%27)|(\')|(\-\-)|(\%3B)|(;))/i,
@@ -68,28 +68,28 @@
     const rawHash = window.location.hash;
     const fullCheck = decodeURIComponent(rawSearch + " " + rawHash);
 
-    // Verifica tentativa de SQL Injection
+    // Audit for SQL Injection attempt
     for (const pattern of SQLI_PATTERNS) {
       if (pattern.test(fullCheck)) {
-        console.warn("[CyberSecurity] Tentativa de SQL Injection detectada e bloqueada na URL.");
+        console.warn("[CyberSecurity] Potential SQL Injection pattern detected and sanitized from URL.");
         history.replaceState(null, "", window.location.pathname);
         return;
       }
     }
 
-    // Verifica tentativa de XSS / JS Injection
+    // Audit for XSS / JS Injection attempt
     for (const pattern of XSS_PATTERNS) {
       if (pattern.test(fullCheck)) {
-        console.warn("[CyberSecurity] Tentativa de JS/XSS Injection detectada e bloqueada na URL.");
+        console.warn("[CyberSecurity] Potential XSS / JS Injection pattern detected and sanitized from URL.");
         history.replaceState(null, "", window.location.pathname);
         return;
       }
     }
 
-    // Verifica tentativa de Path Traversal
+    // Audit for Path Traversal attempt
     for (const pattern of PATH_TRAVERSAL_PATTERNS) {
       if (pattern.test(fullCheck)) {
-        console.warn("[CyberSecurity] Tentativa de Path Traversal detectada e bloqueada.");
+        console.warn("[CyberSecurity] Potential Path Traversal pattern detected and sanitized.");
         history.replaceState(null, "", window.location.pathname);
         return;
       }
@@ -98,10 +98,12 @@
 
   auditLocation();
 
-  // 3. UTILITÁRIO GLOBAL DE ESCAPAMENTO SEGURO DE HTML (XSS DEFENSE)
+  // 3. GLOBAL HTML ENTITY ENCODER & SANITIZATION UTILITIES
   window.SecurityUtils = {
     /**
-     * Escapa caracteres perigosos para prevenir injeção HTML/JS
+     * Escapes critical characters to prevent HTML/JS injection
+     * @param {string} str - Raw input string
+     * @returns {string} - Escaped safe string
      */
     escapeHTML: function (str) {
       if (typeof str !== 'string') return '';
@@ -115,14 +117,16 @@
     },
 
     /**
-     * Valida links externos permitindo apenas URLs seguras
-     * Bloqueia protocolos perigosos como javascript:, data:, vbscript:
+     * Validates destination URL against authorized WhatsApp HTTPS endpoints
+     * Blocks dangerous pseudo-protocols such as javascript:, data:, vbscript:
+     * @param {string} url - Target URL string
+     * @returns {string} - Validated URL or fallback '#'
      */
     sanitizeWhatsAppUrl: function (url) {
       if (typeof url !== 'string') return '#';
       const cleanUrl = url.trim();
 
-      // Permitido apenas HTTPS para WhatsApp oficial
+      // Only allow legitimate official WhatsApp endpoints over HTTPS
       const allowedProtocols = ['https://chat.whatsapp.com/', 'https://wa.me/', 'https://api.whatsapp.com/'];
       const isAllowed = allowedProtocols.some(prefix => cleanUrl.toLowerCase().startsWith(prefix));
 
@@ -130,12 +134,14 @@
         return cleanUrl;
       }
 
-      console.warn("[CyberSecurity] URL não autorizada ou insegura bloqueada:", cleanUrl);
+      console.warn("[CyberSecurity] Blocked unauthorized or insecure destination URL:", cleanUrl);
       return '#';
     },
 
     /**
-     * Sanitiza qualquer string de texto plano antes de inserir no DOM
+     * Strips dangerous injection characters from plain text
+     * @param {string} str - Raw text string
+     * @returns {string} - Cleaned text
      */
     cleanText: function (str) {
       if (typeof str !== 'string') return '';
@@ -143,7 +149,7 @@
     }
   };
 
-  // Congela o utilitário para evitar sobrescrita por scripts externos
+  // Deep freeze security utilities to prevent runtime tampering
   Object.freeze(window.SecurityUtils);
 
 })();

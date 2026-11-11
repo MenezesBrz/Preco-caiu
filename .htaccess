@@ -1,62 +1,62 @@
 # ============================================================
-# O PREÇO CAIU - REGRAS DE CIBERSEGURANÇA (.htaccess)
-# Proteção contra SQL Injection, XSS, JS Injection e Ataques Web
-# Compatível com Apache, LiteSpeed e cPanel
+# O PREÇO CAIU - WEB SERVER FIREWALL & SECURITY RULES (.htaccess)
+# Protection against SQL Injection, XSS, JS Injection, and Web Attacks
+# Compatible with Apache, LiteSpeed, and cPanel environments
 # ============================================================
 
 <IfModule mod_rewrite.c>
   RewriteEngine On
 
-  # 1. FORÇAR HTTPS (Tráfego Criptografado com SSL)
+  # 1. ENFORCE HTTPS (SSL Encrypted Traffic)
   RewriteCond %{HTTPS} off
   RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
-  # 2. BLOQUEIO ATIVO DE INJEÇÃO SQL (SQL INJECTION FILTER)
-  # Bloqueia qualquer URL contendo UNION, SELECT, INSERT, DROP, etc.
+  # 2. ACTIVE SQL INJECTION FILTER
+  # Blocks query strings containing SQL command keywords, delimiters, and functions
   RewriteCond %{QUERY_STRING} [^a-zA-Z0-9_](union|select|insert|update|delete|drop|table|concat|benchmark|sleep)[^a-zA-Z0-9_] [NC,OR]
   RewriteCond %{QUERY_STRING} (\%27)|(\')|(\-\-)|(\%23)|(#) [NC,OR]
   RewriteCond %{QUERY_STRING} (information_schema|schema\(|user\() [NC]
   RewriteRule ^(.*)$ - [F,L]
 
-  # 3. BLOQUEIO ATIVO DE CROSS-SITE SCRIPTING (XSS & JS INJECTION)
-  # Bloqueia qualquer URL tentando injetar scripts, tags ou manipuladores de evento
+  # 3. ACTIVE CROSS-SITE SCRIPTING (XSS & JS INJECTION) FILTER
+  # Blocks query strings attempting to inject scripts, tags, or DOM event handlers
   RewriteCond %{QUERY_STRING} (<|%3C)([^s]*s)+cript.*(>|%3E) [NC,OR]
   RewriteCond %{QUERY_STRING} (javascript:|vbscript:|data:text/html) [NC,OR]
   RewriteCond %{QUERY_STRING} (onload|onerror|onclick|onmouseover|eval\(|document\.cookie) [NC]
   RewriteRule ^(.*)$ - [F,L]
 
-  # 4. BLOQUEIO DE PATH TRAVERSAL E ARQUIVOS SENSÍVEIS
+  # 4. PATH TRAVERSAL & SENSITIVE FILE ACCESS FILTER
   RewriteCond %{QUERY_STRING} (\.\./|\.\.\\|%2e%2e) [NC]
   RewriteRule ^(.*)$ - [F,L]
 </IfModule>
 
-# 5. DESATIVAR LISTAGEM DE DIRETÓRIOS (DIRECTORY BROWSING)
-# Impede que invasores vejam a lista de arquivos das pastas
+# 5. DISABLE DIRECTORY BROWSING
+# Prevents unauthorized file indexing and directory reconnaissance
 Options -Indexes
 
-# 6. BLOQUEAR ARQUIVOS OCULTOS OU DE CONFIGURAÇÃO (.git, .env, .htaccess)
+# 6. BLOCK ACCESS TO HIDDEN AND CONFIGURATION FILES (.git, .env, .htaccess)
 <FilesMatch "^\.">
   Order allow,deny
   Deny from all
 </FilesMatch>
 
-# 7. CABEÇALHOS HTTP DE SEGURANÇA (SECURITY HEADERS)
+# 7. HTTP SECURITY HEADERS (HARDENED PROFILE)
 <IfModule mod_headers.c>
-  # Prevenção de Clickjacking (Iframe)
+  # Anti-Clickjacking & UI Redressing Defense
   Header always set X-Frame-Options "DENY"
 
-  # Prevenção de MIME Sniffing
+  # Anti-MIME Sniffing Defense
   Header always set X-Content-Type-Options "nosniff"
 
-  # Proteção contra vazamento de referenciador
+  # Referrer Privacy Enforcement
   Header always set Referrer-Policy "strict-origin-when-cross-origin"
 
-  # Desativa recursos invasivos de hardware do navegador
+  # Restrict Access to Sensitive Hardware Device Features
   Header always set Permissions-Policy "camera=(), microphone=(), geolocation=(), payment=()"
 
-  # Força HTTPS permanente no navegador (HSTS - 1 ano)
+  # HTTP Strict Transport Security (HSTS - 1 Year with SubDomains and Preload)
   Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
 
-  # Content Security Policy (CSP Estrito)
+  # Strict Content Security Policy (CSP)
   Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' https://fonts.googleapis.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https:; object-src 'none'; base-uri 'self'; form-action 'self';"
 </IfModule>
