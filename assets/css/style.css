@@ -205,36 +205,39 @@ button {
   z-index: 2;
 }
 
-/* Logo Oficial 400x400 quadrado com borda refinada */
+/* Logo Header Quadrado e Proporcional */
 .hero-brand {
   display: flex;
   justify-content: center;
-  margin-bottom: 16px;
+  margin-bottom: 14px;
   animation: fadeDown 0.6s ease both;
 }
 
 .hero-logo-box {
-  background: #FFDD00;
-  padding: 5px;
-  border-radius: 20px;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.28);
+  width: 68px;
+  height: 68px;
+  aspect-ratio: 1 / 1;
+  background: #FDE705;
+  padding: 6px;
+  border-radius: 18px;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.20);
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border: 3.5px solid #FFFFFF;
+  border: 2.5px solid #FFFFFF;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-sizing: border-box;
 }
 
 .hero-logo-box:hover {
-  transform: translateY(-2px) scale(1.02);
-  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.34);
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.26);
 }
 
 .hero-logo-img {
-  width: 105px;
-  height: 105px;
-  border-radius: 14px;
-  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
   display: block;
 }
 
@@ -678,13 +681,16 @@ footer {
 }
 
 .footer-logo img {
-  width: 56px;
-  height: 56px;
-  border-radius: 12px;
-  background: #FFDD00;
+  width: 52px;
+  height: 52px;
+  aspect-ratio: 1 / 1;
+  border-radius: 14px;
+  background: #FDE705;
   border: 2px solid #FFFFFF;
-  padding: 3px;
-  object-fit: cover;
+  padding: 4px;
+  object-fit: contain;
+  display: block;
+  box-sizing: border-box;
 }
 
 .footer-links {
@@ -754,9 +760,15 @@ footer {
   .re-grid {
     grid-template-columns: 1fr;
   }
+  .hero-logo-box {
+    width: 60px;
+    height: 60px;
+    padding: 5px;
+    border-radius: 16px;
+  }
   .hero-logo-img {
-    width: 90px;
-    height: 90px;
+    width: 100%;
+    height: 100%;
   }
   .hero-steps .step-sep {
     display: none;

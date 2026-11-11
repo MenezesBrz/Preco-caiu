@@ -31,7 +31,7 @@ const SITE_CONFIG = {
       description: "Celulares com super desconto",
       image: "assets/img/smartphone-e-iphone.webp",
       fallbackEmoji: "📱",
-      whatsappUrl: "https://chat.whatsapp.com/seu-grupo-smartphones"
+      whatsappUrl: "https://chat.whatsapp.com/31990878679"
     },
     {
       id: "tecnologia",
