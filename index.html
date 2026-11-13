@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>O Preço Caiu - Grupos VIP de Ofertas e Cupons no WhatsApp</title>
-  <meta name="description" content="Receba ofertas reais, cupons secretos e alertas imediatos de queda de preço no seu WhatsApp. Escolha sua categoria favorita e entre 100% grátis!">
+  <title>O Preço Caiu - Grupos de Ofertas e Cupons no WhatsApp</title>
+  <meta name="description" content="Receba ofertas reais, cupons de desconto e alertas de queda de preço direto no seu WhatsApp. Escolha sua categoria favorita e participe de graça!">
 
   <!-- CYBERSECURITY: HARDENED CONTENT SECURITY POLICY (CSP) & SECURITY HEADERS -->
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://fonts.googleapis.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https:; object-src 'none'; base-uri 'self'; form-action 'self';">
@@ -24,7 +24,7 @@
   <!-- Google Web Fonts Preconnect & Stylesheet -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&display=swap" rel="stylesheet">
 
   <!-- Application Stylesheet -->
   <link rel="stylesheet" href="assets/css/style.css">
@@ -34,140 +34,138 @@
 </head>
 <body>
 
-  <!-- TOP DEALS TICKER STREAM -->
-  <div class="ticker-ribbon" aria-label="Últimas quedas de preço registradas">
-    <div class="ticker-badge">
-      <span class="live-dot"></span>
-      <span>AO VIVO</span>
-    </div>
-    <div class="ticker-viewport">
-      <div class="ticker-track" id="tickerTrack">
-        <!-- Dynamically populated via config.js -->
+  <!-- REAL-TIME STORE DEALS TICKER -->
+  <aside class="ticker-bar" aria-label="Últimas quedas de preço registradas">
+    <div class="wrap ticker-wrap">
+      <div class="ticker-label">
+        <span class="ticker-tag">OFERTAS AO VIVO</span>
+      </div>
+      <div class="ticker-viewport">
+        <div class="ticker-track" id="tickerTrack">
+          <!-- Dynamically populated via config.js -->
+        </div>
       </div>
     </div>
-  </div>
+  </aside>
 
-  <!-- NAVIGATION HEADER -->
-  <nav class="nav-bar">
-    <div class="wrap nav-wrap">
-      <a href="index.html" class="nav-brand" aria-label="O Preço Caiu - Página Inicial">
-        <div class="nav-logo-box">
-          <img src="assets/img/logo.png" alt="O Preço Caiu" class="nav-logo-img">
+  <!-- SOLID & WELCOMING HEADER -->
+  <header class="site-header">
+    <div class="wrap header-wrap">
+      <a href="index.html" class="header-brand" aria-label="O Preço Caiu - Página Inicial">
+        <div class="header-logo-box">
+          <img src="assets/img/logo.png" alt="Logo O Preço Caiu" class="header-logo-img">
         </div>
-        <div class="nav-brand-title">
-          <span class="brand-name">O Preço Caiu</span>
-          <span class="brand-tag">Comunidade Oficial</span>
+        <div class="header-brand-info">
+          <span class="header-brand-name">O Preço Caiu</span>
+          <span class="header-brand-badge">Comunidade no WhatsApp</span>
         </div>
       </a>
 
-      <div class="nav-stats">
-        <span class="pulse-indicator"></span>
-        <span class="stats-text">+ de <strong>48.700</strong> membros</span>
+      <div class="header-trust-badge">
+        <span class="badge-check">✓</span>
+        <span>+48.000 membros economizando • <strong>100% Gratuito</strong></span>
       </div>
 
-      <div class="nav-links">
-        <a href="#grupos" class="nav-link">Grupos</a>
-        <a href="#beneficios" class="nav-link">Vantagens</a>
-        <a href="#duvidas" class="nav-link">Dúvidas</a>
-        <a href="#grupos" class="nav-btn-cta">Escolher Grupo</a>
-      </div>
-    </div>
-  </nav>
-
-  <!-- HERO SECTION WITH ATMOSPHERIC MIDNIGHT & WARM AMBER THEME -->
-  <header class="hero-section">
-    <div class="wrap hero-wrap">
-      
-      <!-- OFFICIAL BRAND BADGE -->
-      <div class="hero-brand-spot">
-        <div class="hero-logo-box">
-          <img src="assets/img/logo.png" alt="Logo O Preço Caiu" class="hero-logo-img">
-        </div>
-      </div>
-
-      <!-- LIVE COMMUNITY SOCIAL PROOF PILL -->
-      <div class="hero-pill">
-        <span class="pill-fire">🔥</span>
-        <span>Alertas de preço baixo e cupons em tempo real</span>
-      </div>
-
-      <!-- MAIN HEADLINE -->
-      <h1 class="hero-headline">
-        Quando <span class="hl-gradient">o preço caiu</span>, você é o primeiro a saber no seu WhatsApp
-      </h1>
-
-      <p class="hero-description">
-        Monitore descontos reais, cupons exclusivos e alertas de bugs das maiores lojas do Brasil. Escolha sua categoria abaixo e entre gratuitamente sem nenhum spam.
-      </p>
-
-      <!-- 3-STEP MODERN ONBOARDING STEPPER CARDS -->
-      <div class="stepper-grid">
-        <div class="stepper-card">
-          <div class="stepper-num">01</div>
-          <div class="stepper-info">
-            <b>Escolha o Grupo</b>
-            <span>Selecione a categoria do seu interesse</span>
-          </div>
-        </div>
-
-        <div class="stepper-arrow" aria-hidden="true">→</div>
-
-        <div class="stepper-card">
-          <div class="stepper-num">02</div>
-          <div class="stepper-info">
-            <b>Toque em Entrar</b>
-            <span>O WhatsApp abre de forma instantânea</span>
-          </div>
-        </div>
-
-        <div class="stepper-arrow" aria-hidden="true">→</div>
-
-        <div class="stepper-card">
-          <div class="stepper-num">03</div>
-          <div class="stepper-info">
-            <b>Economize Todo Dia</b>
-            <span>Receba os melhores cupons e ofertas</span>
-          </div>
-        </div>
-      </div>
-
+      <nav class="header-nav">
+        <a href="#grupos" class="header-link">Grupos</a>
+        <a href="#como-funciona" class="header-link">Como Funciona</a>
+        <a href="#beneficios" class="header-link">Vantagens</a>
+        <a href="#duvidas" class="header-link">Dúvidas</a>
+        <a href="#grupos" class="header-cta-btn">Ver Grupos</a>
+      </nav>
     </div>
   </header>
 
-  <!-- CATEGORY GROUPS SECTION (12 SEGMENTED CHANNELS) -->
+  <!-- WARM, HUMAN HERO SECTION (NO ARTIFICIAL GLOWS OR FADING TEXT) -->
+  <section class="hero-section" id="inicio">
+    <div class="wrap hero-wrap">
+      
+      <div class="hero-brand-center">
+        <div class="hero-logo-box">
+          <img src="assets/img/logo.png" alt="O Preço Caiu" class="hero-logo-img">
+        </div>
+      </div>
+
+      <div class="hero-lead-pill">
+        <span>Economize nas maiores lojas online do Brasil</span>
+      </div>
+
+      <h1 class="hero-title">
+        Quando <mark class="hl-marker">o preço caiu</mark>, você é o primeiro a saber no seu WhatsApp.
+      </h1>
+
+      <p class="hero-description">
+        Monitore descontos reais, cupons secretos e avisos imediatos de queda de preço. Escolha uma das categorias abaixo e participe de graça, sem mensalidade e sem spam.
+      </p>
+
+      <!-- 3 SIMPLE ONBOARDING STEPS -->
+      <div class="how-it-works" id="como-funciona">
+        <div class="step-card">
+          <div class="step-number">1</div>
+          <div class="step-content">
+            <strong>Escolha sua categoria</strong>
+            <span>Veja as 12 categorias de produtos disponíveis</span>
+          </div>
+        </div>
+
+        <div class="step-arrow" aria-hidden="true">→</div>
+
+        <div class="step-card">
+          <div class="step-number">2</div>
+          <div class="step-content">
+            <strong>Toque para entrar</strong>
+            <span>O WhatsApp abre na hora, direto e sem cadastro</span>
+          </div>
+        </div>
+
+        <div class="step-arrow" aria-hidden="true">→</div>
+
+        <div class="step-card">
+          <div class="step-number">3</div>
+          <div class="step-content">
+            <strong>Receba as ofertas</strong>
+            <span>Economize todo dia com cupons e preços baixos</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CATEGORY GROUPS SECTION (REORGANIZED RESPONSIVENESS: 2 COLUMNS ON PC, 1 COLUMN ON MOBILE) -->
   <main class="groups-section" id="grupos">
     <div class="wrap">
       
-      <div class="section-header">
-        <span class="section-tag">Categorias Disponíveis</span>
+      <div class="section-heading">
+        <span class="section-tag">Canais Disponíveis</span>
         <h2 class="section-title">Escolha seu grupo e entre agora</h2>
-        <p class="section-subtitle">
-          São 12 canais segmentados. Participe de quantas categorias quiser — basta tocar no botão para abrir no WhatsApp.
+        <p class="section-description">
+          São 12 grupos temáticos no WhatsApp. Você pode entrar em quantos quiser — basta tocar no botão verde ao lado.
         </p>
       </div>
 
-      <!-- INTERACTIVE CATEGORY FILTER TABS -->
-      <div class="filter-tabs-wrapper">
+      <!-- FILTER TABS -->
+      <div class="filter-bar">
         <div class="filter-tabs" id="filterTabs" role="tablist" aria-label="Filtrar categorias">
           <button class="filter-btn active" data-filter="all" type="button" role="tab" aria-selected="true">
-            <span>🔥 Todos</span> <span class="tab-count">12</span>
+            <span>Todas as Categorias</span> <span class="tab-badge">12</span>
           </button>
           <button class="filter-btn" data-filter="tech" type="button" role="tab" aria-selected="false">
-            <span>📱 Tech & Celulares</span>
+            <span>Celulares &amp; Tech</span>
           </button>
           <button class="filter-btn" data-filter="lifestyle" type="button" role="tab" aria-selected="false">
-            <span>🏠 Casa & Moda</span>
+            <span>Casa, Moda &amp; Bebê</span>
           </button>
           <button class="filter-btn" data-filter="leisure" type="button" role="tab" aria-selected="false">
-            <span>🎮 Games & Lazer</span>
+            <span>Gamer, Esporte &amp; Viagem</span>
           </button>
           <button class="filter-btn" data-filter="others" type="button" role="tab" aria-selected="false">
-            <span>⚡ Outros</span>
+            <span>Carro, Ferramentas &amp; Estudos</span>
           </button>
         </div>
       </div>
 
-      <!-- VERTICAL LIST OF 12 INDIVIDUAL GROUPS (DIRECT WHATSAPP INVITATION LINKS) -->
+      <!-- 12 GROUPS LIST: BALANCED 2-COLUMN GRID ON PC, 1 COLUMN ON MOBILE -->
       <div class="group-list" id="groupList">
 
         <!-- 1. SMARTPHONE & IPHONE -->
@@ -175,18 +173,18 @@
           <div class="group-thumb-box">
             <img class="group-thumb" src="assets/img/smartphone-e-iphone.webp" alt="Smartphone &amp; iPhone" loading="lazy" width="58" height="58">
           </div>
-          <div class="group-txt">
-            <div class="group-badge-line">
-              <span class="group-mini-badge badge-hot">🔥 Mais Acessado</span>
+          <div class="group-info">
+            <div class="group-tag-row">
+              <span class="group-tag tag-hot">🔥 Mais Acessado</span>
             </div>
-            <b>Smartphone &amp; iPhone</b>
-            <small>Celulares, iPhones, Samsung e Xiaomi com super desconto</small>
+            <strong class="group-name">Smartphone &amp; iPhone</strong>
+            <span class="group-desc">Celulares, iPhones, Samsung e Xiaomi com super desconto</span>
           </div>
-          <span class="btn-enter">
+          <span class="btn-whatsapp">
             <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" width="16" height="16">
               <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Z"></path>
             </svg>
-            <span class="btn-label">Entrar</span>
+            <span class="btn-text">Entrar</span>
           </span>
         </a>
 
@@ -195,18 +193,18 @@
           <div class="group-thumb-box">
             <img class="group-thumb" src="assets/img/tecnologia.webp" alt="Tecnologia" loading="lazy" width="58" height="58">
           </div>
-          <div class="group-txt">
-            <div class="group-badge-line">
-              <span class="group-mini-badge badge-flash">⚡ Ofertas Relâmpago</span>
+          <div class="group-info">
+            <div class="group-tag-row">
+              <span class="group-tag tag-blue">⚡ Ofertas do Dia</span>
             </div>
-            <b>Tecnologia</b>
-            <small>Gadgets, fones Bluetooth, smartwatches e notebooks</small>
+            <strong class="group-name">Tecnologia</strong>
+            <span class="group-desc">Gadgets, fones Bluetooth, smartwatches e notebooks</span>
           </div>
-          <span class="btn-enter">
+          <span class="btn-whatsapp">
             <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" width="16" height="16">
               <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Z"></path>
             </svg>
-            <span class="btn-label">Entrar</span>
+            <span class="btn-text">Entrar</span>
           </span>
         </a>
 
@@ -215,18 +213,18 @@
           <div class="group-thumb-box">
             <img class="group-thumb" src="assets/img/moda-e-beleza.webp" alt="Moda &amp; Beleza" loading="lazy" width="58" height="58">
           </div>
-          <div class="group-txt">
-            <div class="group-badge-line">
-              <span class="group-mini-badge badge-style">✨ Cupons Diários</span>
+          <div class="group-info">
+            <div class="group-tag-row">
+              <span class="group-tag tag-pink">✨ Cupons Diários</span>
             </div>
-            <b>Moda &amp; Beleza</b>
-            <small>Looks, cosméticos, maquiagens e perfumes importados</small>
+            <strong class="group-name">Moda &amp; Beleza</strong>
+            <span class="group-desc">Looks, cosméticos, maquiagens e perfumes importados</span>
           </div>
-          <span class="btn-enter">
+          <span class="btn-whatsapp">
             <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" width="16" height="16">
               <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Z"></path>
             </svg>
-            <span class="btn-label">Entrar</span>
+            <span class="btn-text">Entrar</span>
           </span>
         </a>
 
@@ -235,18 +233,18 @@
           <div class="group-thumb-box">
             <img class="group-thumb" src="assets/img/lar-e-deco.webp" alt="Lar &amp; Decoração" loading="lazy" width="58" height="58">
           </div>
-          <div class="group-txt">
-            <div class="group-badge-line">
-              <span class="group-mini-badge badge-home">🏡 Casa &amp; Cozinha</span>
+          <div class="group-info">
+            <div class="group-tag-row">
+              <span class="group-tag tag-green">🏡 Casa &amp; Cozinha</span>
             </div>
-            <b>Lar &amp; Decoração</b>
-            <small>Eletroportáteis, air fryers, móveis e itens de organização</small>
+            <strong class="group-name">Lar &amp; Decoração</strong>
+            <span class="group-desc">Air fryers, eletroportáteis, móveis e utilidades do lar</span>
           </div>
-          <span class="btn-enter">
+          <span class="btn-whatsapp">
             <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" width="16" height="16">
               <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Z"></path>
             </svg>
-            <span class="btn-label">Entrar</span>
+            <span class="btn-text">Entrar</span>
           </span>
         </a>
 
@@ -255,18 +253,18 @@
           <div class="group-thumb-box">
             <img class="group-thumb" src="assets/img/fitness.webp" alt="Fitness" loading="lazy" width="58" height="58">
           </div>
-          <div class="group-txt">
-            <div class="group-badge-line">
-              <span class="group-mini-badge badge-active">💪 Suplementos &amp; Treino</span>
+          <div class="group-info">
+            <div class="group-tag-row">
+              <span class="group-tag tag-amber">💪 Treino &amp; Dieta</span>
             </div>
-            <b>Fitness</b>
-            <small>Whey protein, creatina, roupas esportivas e acessórios</small>
+            <strong class="group-name">Fitness</strong>
+            <span class="group-desc">Whey protein, creatina, roupas esportivas e suplementos</span>
           </div>
-          <span class="btn-enter">
+          <span class="btn-whatsapp">
             <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" width="16" height="16">
               <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Z"></path>
             </svg>
-            <span class="btn-label">Entrar</span>
+            <span class="btn-text">Entrar</span>
           </span>
         </a>
 
@@ -275,18 +273,18 @@
           <div class="group-thumb-box">
             <img class="group-thumb" src="assets/img/gamer.webp" alt="Gamer" loading="lazy" width="58" height="58">
           </div>
-          <div class="group-txt">
-            <div class="group-badge-line">
-              <span class="group-mini-badge badge-game">🎮 Consoles &amp; PC</span>
+          <div class="group-info">
+            <div class="group-tag-row">
+              <span class="group-tag tag-purple">🎮 Consoles &amp; PC</span>
             </div>
-            <b>Gamer</b>
-            <small>PlayStation, Xbox, Nintendo Switch, periféricos e jogos</small>
+            <strong class="group-name">Gamer</strong>
+            <span class="group-desc">PlayStation, Xbox, Nintendo Switch, periféricos e jogos</span>
           </div>
-          <span class="btn-enter">
+          <span class="btn-whatsapp">
             <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" width="16" height="16">
               <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Z"></path>
             </svg>
-            <span class="btn-label">Entrar</span>
+            <span class="btn-text">Entrar</span>
           </span>
         </a>
 
@@ -295,18 +293,18 @@
           <div class="group-thumb-box">
             <img class="group-thumb" src="assets/img/infantil.webp" alt="Infantil" loading="lazy" width="58" height="58">
           </div>
-          <div class="group-txt">
-            <div class="group-badge-line">
-              <span class="group-mini-badge badge-kids">🧸 Bebês &amp; Crianças</span>
+          <div class="group-info">
+            <div class="group-tag-row">
+              <span class="group-tag tag-yellow">🧸 Bebês &amp; Pais</span>
             </div>
-            <b>Infantil</b>
-            <small>Fraldas em promoção, brinquedos, roupas e puericultura</small>
+            <strong class="group-name">Infantil</strong>
+            <span class="group-desc">Fraldas baratas, brinquedos, roupas e itens essenciais</span>
           </div>
-          <span class="btn-enter">
+          <span class="btn-whatsapp">
             <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" width="16" height="16">
               <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Z"></path>
             </svg>
-            <span class="btn-label">Entrar</span>
+            <span class="btn-text">Entrar</span>
           </span>
         </a>
 
@@ -315,18 +313,18 @@
           <div class="group-thumb-box">
             <img class="group-thumb" src="assets/img/esporte.webp" alt="Esporte" loading="lazy" width="58" height="58">
           </div>
-          <div class="group-txt">
-            <div class="group-badge-line">
-              <span class="group-mini-badge badge-sport">⚽ Tênis &amp; Chuteiras</span>
+          <div class="group-info">
+            <div class="group-tag-row">
+              <span class="group-tag tag-cyan">⚽ Tênis &amp; Chuteiras</span>
             </div>
-            <b>Esporte</b>
-            <small>Tênis de corrida, camisas de time, bolas e equipamentos</small>
+            <strong class="group-name">Esporte</strong>
+            <span class="group-desc">Tênis de corrida, camisas de time, bolas e artigos esportivos</span>
           </div>
-          <span class="btn-enter">
+          <span class="btn-whatsapp">
             <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" width="16" height="16">
               <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Z"></path>
             </svg>
-            <span class="btn-label">Entrar</span>
+            <span class="btn-text">Entrar</span>
           </span>
         </a>
 
@@ -335,18 +333,18 @@
           <div class="group-thumb-box">
             <img class="group-thumb" src="assets/img/autocar.webp" alt="AutoCar" loading="lazy" width="58" height="58">
           </div>
-          <div class="group-txt">
-            <div class="group-badge-line">
-              <span class="group-mini-badge badge-auto">🚗 Carro &amp; Moto</span>
+          <div class="group-info">
+            <div class="group-tag-row">
+              <span class="group-tag tag-gray">🚗 Carro &amp; Moto</span>
             </div>
-            <b>AutoCar</b>
-            <small>Pneus, som automotivo, lâmpadas LED e ferramentas para veículos</small>
+            <strong class="group-name">AutoCar</strong>
+            <span class="group-desc">Pneus, som automotivo, lâmpadas LED e acessórios</span>
           </div>
-          <span class="btn-enter">
+          <span class="btn-whatsapp">
             <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" width="16" height="16">
               <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Z"></path>
             </svg>
-            <span class="btn-label">Entrar</span>
+            <span class="btn-text">Entrar</span>
           </span>
         </a>
 
@@ -355,18 +353,18 @@
           <div class="group-thumb-box">
             <img class="group-thumb" src="assets/img/ferramentas.webp" alt="Ferramentas" loading="lazy" width="58" height="58">
           </div>
-          <div class="group-txt">
-            <div class="group-badge-line">
-              <span class="group-mini-badge badge-tools">🔧 Oficina &amp; Obra</span>
+          <div class="group-info">
+            <div class="group-tag-row">
+              <span class="group-tag tag-orange">🔧 Oficina &amp; Casa</span>
             </div>
-            <b>Ferramentas</b>
-            <small>Parafusadeiras, furadeiras, kits de chaves e construção</small>
+            <strong class="group-name">Ferramentas</strong>
+            <span class="group-desc">Parafusadeiras, furadeiras, kits de chaves e construção</span>
           </div>
-          <span class="btn-enter">
+          <span class="btn-whatsapp">
             <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" width="16" height="16">
               <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Z"></path>
             </svg>
-            <span class="btn-label">Entrar</span>
+            <span class="btn-text">Entrar</span>
           </span>
         </a>
 
@@ -375,18 +373,18 @@
           <div class="group-thumb-box">
             <img class="group-thumb" src="assets/img/estudos.webp" alt="Estudos" loading="lazy" width="58" height="58">
           </div>
-          <div class="group-txt">
-            <div class="group-badge-line">
-              <span class="group-mini-badge badge-study">📚 Livros &amp; Cursos</span>
+          <div class="group-info">
+            <div class="group-tag-row">
+              <span class="group-tag tag-blue">📚 Livros &amp; Concursos</span>
             </div>
-            <b>Estudos</b>
-            <small>Livros físicos, Kindle, materiais de concurso e papelaria</small>
+            <strong class="group-name">Estudos</strong>
+            <span class="group-desc">Livros físicos, Kindle, apostilas e material de papelaria</span>
           </div>
-          <span class="btn-enter">
+          <span class="btn-whatsapp">
             <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" width="16" height="16">
               <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Z"></path>
             </svg>
-            <span class="btn-label">Entrar</span>
+            <span class="btn-text">Entrar</span>
           </span>
         </a>
 
@@ -395,18 +393,18 @@
           <div class="group-thumb-box">
             <img class="group-thumb" src="assets/img/viagem.jpg" alt="Viagem" loading="lazy" width="58" height="58">
           </div>
-          <div class="group-txt">
-            <div class="group-badge-line">
-              <span class="group-mini-badge badge-travel">✈️ Malas &amp; Roteiros</span>
+          <div class="group-info">
+            <div class="group-tag-row">
+              <span class="group-tag tag-teal">✈️ Malas &amp; Passeios</span>
             </div>
-            <b>Viagem</b>
-            <small>Malas de bordo, mochilas, adaptadores e itens essenciais</small>
+            <strong class="group-name">Viagem</strong>
+            <span class="group-desc">Malas de bordo, mochilas, organizadores e adaptadores</span>
           </div>
-          <span class="btn-enter">
+          <span class="btn-whatsapp">
             <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" width="16" height="16">
               <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Z"></path>
             </svg>
-            <span class="btn-label">Entrar</span>
+            <span class="btn-text">Entrar</span>
           </span>
         </a>
 
@@ -415,94 +413,94 @@
     </div>
   </main>
 
-  <!-- BENTO-GRID TRUST & ADVANTAGES SECTION -->
+  <!-- SOLID & REASSURING TRUST SECTION -->
   <section class="benefits-section" id="beneficios">
     <div class="wrap">
-      <div class="section-header">
+      <div class="section-heading">
         <span class="section-tag">Transparência &amp; Segurança</span>
-        <h2 class="section-title">Por que o Preço Caiu é diferente?</h2>
-        <p class="section-subtitle">
-          Criamos um ecossistema seguro e focado exclusivamente na economia real dos membros.
+        <h2 class="section-title">Por que você pode confiar no Preço Caiu?</h2>
+        <p class="section-description">
+          Construímos um espaço seguro, transparente e focado em economia real para o seu dia a dia.
         </p>
       </div>
 
-      <div class="bento-grid">
-        <div class="bento-card bento-hero-card">
-          <div class="bento-icon">🆓</div>
-          <div class="bento-content">
+      <div class="benefits-grid">
+        <div class="benefit-card">
+          <div class="benefit-icon">🆓</div>
+          <div class="benefit-body">
             <h3>100% Gratuito Para Sempre</h3>
-            <p>Você nunca pagará absolutamente nada para entrar ou continuar nos grupos. Nossa receita provém de afiliação oficial com os marketplaces parceiros.</p>
+            <p>Você nunca pagará nenhuma taxa para entrar ou receber os avisos. Não pedimos cartão nem dados pessoais.</p>
           </div>
         </div>
 
-        <div class="bento-card">
-          <div class="bento-icon">🛡️</div>
-          <div class="bento-content">
-            <h3>Descontos Reais Auditados</h3>
-            <p>Conferimos o histórico de preços antes de publicar para filtrar promoções falsas da metade do dobro.</p>
+        <div class="benefit-card">
+          <div class="benefit-icon">🔍</div>
+          <div class="benefit-body">
+            <h3>Curadoria Manual de Ofertas</h3>
+            <p>Conferimos o histórico de preços de cada produto antes de divulgar, garantindo que o desconto seja de verdade.</p>
           </div>
         </div>
 
-        <div class="bento-card">
-          <div class="bento-icon">🚫</div>
-          <div class="bento-content">
-            <h3>Zero Spam &amp; Grupo Silencioso</h3>
-            <p>Somente os administradores enviam ofertas verificadas. Nada de correntes, conversas paralelas ou notificações irrelevantes.</p>
+        <div class="benefit-card">
+          <div class="benefit-icon">🛡️</div>
+          <div class="benefit-body">
+            <h3>Grupo Silencioso e Sem Spam</h3>
+            <p>Apenas os administradores enviam ofertas selecionadas. Nada de correntes, propagandas chatas ou conversas paralelas.</p>
           </div>
         </div>
 
-        <div class="bento-card">
-          <div class="bento-icon">🔕</div>
-          <div class="bento-content">
-            <h3>Liberdade Sem Compromisso</h3>
-            <p>Você pode silenciar o canal para conferir no seu tempo livre ou sair a qualquer momento com apenas 1 clique.</p>
+        <div class="benefit-card">
+          <div class="benefit-icon">🛍️</div>
+          <div class="benefit-body">
+            <h3>Apenas Grandes Lojas Oficiais</h3>
+            <p>Todos os links direcionam para lojas oficiais verificadas como Amazon, Mercado Livre, Shopee e Magalu.</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- SOCIAL PROOF / COMMUNITY REVIEWS STRIP -->
+  <!-- HONEST COMMUNITY TESTIMONIALS -->
   <section class="reviews-section">
     <div class="wrap">
-      <div class="reviews-header">
-        <span class="reviews-badge">⭐ Avaliação dos Membros</span>
-        <h3>O que diz quem já economiza com a gente</h3>
+      <div class="section-heading">
+        <span class="section-tag">Depoimentos Reais</span>
+        <h2 class="section-title">O que dizem os membros da nossa comunidade</h2>
       </div>
 
       <div class="reviews-grid">
         <div class="review-card">
           <div class="review-stars">★★★★★</div>
-          <p class="review-quote">"Peguei um iPhone 15 com R$ 800 de desconto no grupo de smartphones. Vale muito a pena!"</p>
+          <p class="review-text">"Consegui comprar meu celular com mais de R$ 600 de desconto graças ao aviso no grupo. O link foi direto da loja oficial da Amazon."</p>
           <div class="review-author">
-            <span class="author-avatar">LM</span>
+            <span class="author-initials">LM</span>
             <div>
               <strong>Lucas Menezes</strong>
-              <small>Membro há 7 meses</small>
+              <small>Membro no grupo de Smartphones</small>
             </div>
           </div>
         </div>
 
         <div class="review-card">
           <div class="review-stars">★★★★★</div>
-          <p class="review-quote">"O que eu mais gosto é que não tem conversa fiada. Só mandam preço bom e cupom que realmente funciona."</p>
+          <p class="review-text">"O melhor é que o grupo é quieto e só apita quando realmente tem preço bom. Já economizei bastante em fraldas e coisas para a casa."</p>
           <div class="review-author">
-            <span class="author-avatar">CS</span>
+            <span class="author-initials">CS</span>
             <div>
               <strong>Camila Souza</strong>
-              <small>Membro há 1 ano</small>
+              <small>Membro no grupo Lar &amp; Infantil</small>
             </div>
           </div>
         </div>
 
         <div class="review-card">
           <div class="review-stars">★★★★★</div>
-          <p class="review-quote">"Mobiliando meu apartamento economizando quase metade do valor das air fryers e eletros no grupo de Lar."</p>
+          <p class="review-text">"Sempre que preciso de uma peça pro meu setup ou jogo pro PlayStation eu olho no grupo Gamer. Os cupons funcionam de verdade."</p>
           <div class="review-author">
-            <span class="author-avatar">RF</span>
+            <span class="author-initials">RF</span>
             <div>
               <strong>Rafael F.</strong>
-              <small>Membro há 4 meses</small>
+              <small>Membro no grupo Gamer</small>
             </div>
           </div>
         </div>
@@ -510,54 +508,54 @@
     </div>
   </section>
 
-  <!-- FREQUENTLY ASKED QUESTIONS (FAQ) -->
+  <!-- ACCESSIBLE & CLEAN FAQ SECTION -->
   <section class="faq-section" id="duvidas">
     <div class="wrap">
-      <div class="section-header">
+      <div class="section-heading">
         <span class="section-tag">Central de Dúvidas</span>
         <h2 class="section-title">Perguntas Frequentes</h2>
-        <p class="section-subtitle">Tire suas dúvidas antes de entrar nos grupos</p>
+        <p class="section-description">Tire suas dúvidas antes de participar dos grupos</p>
       </div>
 
-      <div class="faq-container">
+      <div class="faq-list">
         <div class="faq-item active">
           <button class="faq-q" type="button" aria-expanded="true">
-            <span class="faq-q-number">01</span>
-            <span class="faq-q-text">É realmente grátis entrar e receber as ofertas?</span>
-            <span class="faq-ic" aria-hidden="true"></span>
+            <span class="faq-number">01</span>
+            <span class="faq-title">É realmente grátis entrar e receber as ofertas?</span>
+            <span class="faq-icon" aria-hidden="true"></span>
           </button>
           <div class="faq-a">
-            <p>Sim, 100% gratuito. Você não paga absolutamente nada para entrar nem para receber as ofertas. Nosso sustento vem de comissões legítimas pagas pelas lojas parceiras oficiais (Amazon, Mercado Livre, Shopee, Magalu, etc.) quando você compra através dos nossos links.</p>
+            <p>Sim, 100% gratuito. Você não paga absolutamente nada para entrar nem para receber as ofertas. Nosso sustento vem de comissões legítimas pagas pelas lojas oficiais parceiras (Amazon, Mercado Livre, Shopee, Magalu, etc.) quando você compra através dos nossos links recomendados.</p>
           </div>
         </div>
 
         <div class="faq-item">
           <button class="faq-q" type="button" aria-expanded="false">
-            <span class="faq-q-number">02</span>
-            <span class="faq-q-text">Como funciona o envio das promoções?</span>
-            <span class="faq-ic" aria-hidden="true"></span>
+            <span class="faq-number">02</span>
+            <span class="faq-title">Como funciona o envio das promoções?</span>
+            <span class="faq-icon" aria-hidden="true"></span>
           </button>
           <div class="faq-a">
-            <p>Direto no seu WhatsApp. Assim que você entra no grupo da sua categoria favorita, passa a receber as melhores ofertas, bugs de preço e cupons de desconto selecionados e testados pela nossa equipe em tempo real.</p>
+            <p>Direto no seu WhatsApp. Assim que você entra no grupo da sua categoria favorita, passa a receber as melhores promoções, quedas de preço e cupons de desconto selecionados e checados manualmente pela nossa equipe em tempo real.</p>
           </div>
         </div>
 
         <div class="faq-item">
           <button class="faq-q" type="button" aria-expanded="false">
-            <span class="faq-q-number">03</span>
-            <span class="faq-q-text">Vou receber muitas mensagens ou spam?</span>
-            <span class="faq-ic" aria-hidden="true"></span>
+            <span class="faq-number">03</span>
+            <span class="faq-title">Vou receber muitas mensagens ou spam?</span>
+            <span class="faq-icon" aria-hidden="true"></span>
           </button>
           <div class="faq-a">
-            <p>Não. Todos os grupos possuem mensagens travadas apenas para a moderação oficial. Postamos unicamente promoções que compensam de verdade, sem correntes, mensagens de bom dia ou anúncios repetitivos. Se quiser, você pode silenciar o grupo para checar no momento mais conveniente.</p>
+            <p>Não. Todos os grupos possuem mensagens travadas apenas para os administradores oficiais. Postamos unicamente promoções que compensam de verdade, sem correntes, mensagens de bom dia ou anúncios repetitivos. Se quiser, você pode silenciar o grupo para ver quando tiver tempo.</p>
           </div>
         </div>
 
         <div class="faq-item">
           <button class="faq-q" type="button" aria-expanded="false">
-            <span class="faq-q-number">04</span>
-            <span class="faq-q-text">Posso participar de mais de um grupo?</span>
-            <span class="faq-ic" aria-hidden="true"></span>
+            <span class="faq-number">04</span>
+            <span class="faq-title">Posso participar de mais de um grupo?</span>
+            <span class="faq-icon" aria-hidden="true"></span>
           </button>
           <div class="faq-a">
             <p>Com certeza! Você pode entrar em quantos grupos quiser. A maioria dos nossos membros participa de 2 ou mais categorias ao mesmo tempo (por exemplo: Smartphone, Gamer e Lar & Decoração).</p>
@@ -566,9 +564,9 @@
 
         <div class="faq-item">
           <button class="faq-q" type="button" aria-expanded="false">
-            <span class="faq-q-number">05</span>
-            <span class="faq-q-text">Os links de compra são seguros e confiáveis?</span>
-            <span class="faq-ic" aria-hidden="true"></span>
+            <span class="faq-number">05</span>
+            <span class="faq-title">Os links de compra são seguros e confiáveis?</span>
+            <span class="faq-icon" aria-hidden="true"></span>
           </button>
           <div class="faq-a">
             <p>Totalmente seguros. Divulgamos exclusivamente links oficiais de grandes lojas verificadas com reputação comprovada e sistemas antifraude. Conferimos o histórico real de preço de cada produto antes de publicar.</p>
@@ -578,7 +576,7 @@
     </div>
   </section>
 
-  <!-- FLOATING QUICK-ACTION BUTTON (ENHANCED MOBILE/TABLET UX) -->
+  <!-- FLOATING QUICK-ACTION BUTTON (SMARTPHONE CONVENIENCE) -->
   <a href="#grupos" class="mobile-float-btn" id="mobileFloatBtn" aria-label="Voltar para a lista de grupos">
     <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18" aria-hidden="true">
       <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Z"></path>
@@ -586,35 +584,36 @@
     <span>Ver Grupos</span>
   </a>
 
-  <!-- APPLICATION FOOTER (DARK MIDNIGHT THEME) -->
+  <!-- SOLID & TRANSPARENT FOOTER -->
   <footer class="site-footer">
     <div class="wrap footer-wrap">
       <div class="footer-top">
-        <div class="footer-brand-box">
-          <div class="footer-logo">
+        <div class="footer-brand">
+          <div class="footer-logo-box">
             <img src="assets/img/logo.png" alt="O Preço Caiu">
           </div>
-          <div>
+          <div class="footer-brand-text">
             <h4 class="footer-title">O Preço Caiu</h4>
-            <p class="footer-sub">A comunidade de ofertas inteligentes que mais cresce no Brasil.</p>
+            <p class="footer-sub">Comunidade independente de curadoria de ofertas e cupons no WhatsApp.</p>
           </div>
         </div>
 
-        <div class="footer-nav">
+        <nav class="footer-nav">
           <a href="#grupos">Categorias</a>
+          <a href="#como-funciona">Como Funciona</a>
           <a href="#beneficios">Vantagens</a>
           <a href="#duvidas">Dúvidas Frequentes</a>
-        </div>
+        </nav>
       </div>
 
       <div class="footer-divider"></div>
 
       <div class="footer-bottom">
         <p class="footer-disclaimer">
-          Aviso Legal: Os preços, cupons de desconto e disponibilidades estão sujeitos a alteração a qualquer momento sem aviso prévio pelas lojas oficiais anunciantes. O Preço Caiu atua como curador e divulgador independente de ofertas.
+          Aviso de Transparência: O Preço Caiu atua de forma independente divulgando as melhores ofertas da internet. Ao comprar através dos links recomendados, podemos receber uma comissão das lojas parceiras sem qualquer custo adicional para o comprador. Os preços e a disponibilidade dos produtos estão sujeitos a alterações pelas lojas oficiais parceiras.
         </p>
         <div class="footer-security-seal">
-          <span>🛡️ Ambiente Protegido com Criptografia e Auditoria Antifraude</span>
+          <span>🛡️ Navegação Segura e Links Verificados</span>
         </div>
       </div>
     </div>
