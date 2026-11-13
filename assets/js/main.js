@@ -1,13 +1,14 @@
 /**
  * ============================================================
  * O PREÇO CAIU - CORE APPLICATION ENGINE
- * Controls Deals Ticker Animation, Dynamic Fallbacks, and FAQ Accordion
+ * Controls Deals Ticker, Responsive FAQ Accordion, and Mobile Quick Jump
  * ============================================================
  */
 
 document.addEventListener("DOMContentLoaded", () => {
   initTicker();
   initFaqAccordion();
+  initFloatingButton();
 });
 
 /* ============================================================
@@ -57,4 +58,29 @@ function initFaqAccordion() {
       }
     });
   });
+}
+
+/* ============================================================
+ * 3. MOBILE FLOATING QUICK-ACTION BUTTON
+ * Provides a frictionless thumb-accessible jump back to the WhatsApp list
+ * ============================================================ */
+function initFloatingButton() {
+  const floatBtn = document.getElementById("mobileFloatBtn");
+  if (!floatBtn) return;
+
+  let isTicking = false;
+  window.addEventListener("scroll", () => {
+    if (!isTicking) {
+      window.requestAnimationFrame(() => {
+        // Display floating action button after user scrolls past 320px
+        if (window.scrollY > 320) {
+          floatBtn.classList.add("visible");
+        } else {
+          floatBtn.classList.remove("visible");
+        }
+        isTicking = false;
+      });
+      isTicking = true;
+    }
+  }, { passive: true });
 }
