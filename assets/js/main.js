@@ -1,12 +1,13 @@
 /**
  * ============================================================
  * O PREÇO CAIU - CORE APPLICATION ENGINE
- * Controls Deals Ticker, Responsive FAQ Accordion, and Mobile Quick Jump
+ * Controls Deals Ticker, Category Filtering, FAQ Accordion, and Mobile Quick Jump
  * ============================================================
  */
 
 document.addEventListener("DOMContentLoaded", () => {
   initTicker();
+  initCategoryFilters();
   initFaqAccordion();
   initFloatingButton();
 });
@@ -28,7 +29,7 @@ function initTicker() {
   track.innerHTML = fullList.map(deal => `
     <div class="ticker-item">
       <span class="drop-badge">${escape(deal.drop)}</span>
-      <strong>${escape(deal.text)}</strong>
+      <strong class="item-name">${escape(deal.text)}</strong>
       <span class="price-now">${escape(deal.price)}</span>
       <span class="old-price">${escape(deal.oldPrice)}</span>
       <span class="store-tag">${escape(deal.store)}</span>
@@ -37,7 +38,45 @@ function initTicker() {
 }
 
 /* ============================================================
- * 2. INTERACTIVE ACCESSIBLE FAQ ACCORDION
+ * 2. CATEGORY TAB FILTERING
+ * Allows instant, animated filtering across the 12 WhatsApp group items
+ * ============================================================ */
+function initCategoryFilters() {
+  const filterBtns = document.querySelectorAll(".filter-btn");
+  const groupItems = document.querySelectorAll(".group-item");
+
+  if (!filterBtns.length || !groupItems.length) return;
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener("click", () => {
+      const selectedFilter = btn.getAttribute("data-filter");
+
+      // Update active tab states
+      filterBtns.forEach(b => {
+        b.classList.remove("active");
+        b.setAttribute("aria-selected", "false");
+      });
+      btn.classList.add("active");
+      btn.setAttribute("aria-selected", "true");
+
+      // Filter group cards with smooth transitions
+      groupItems.forEach(item => {
+        const itemCategory = item.getAttribute("data-category");
+
+        if (selectedFilter === "all" || itemCategory === selectedFilter) {
+          item.classList.remove("filtered-out");
+          item.style.display = "flex";
+        } else {
+          item.classList.add("filtered-out");
+          item.style.display = "none";
+        }
+      });
+    });
+  });
+}
+
+/* ============================================================
+ * 3. INTERACTIVE ACCESSIBLE FAQ ACCORDION
  * Handles smooth expand/collapse behavior with single-active state
  * ============================================================ */
 function initFaqAccordion() {
@@ -50,18 +89,23 @@ function initFaqAccordion() {
       e.preventDefault();
       const isActive = item.classList.contains("active");
 
-      // Close other accordion panels for smooth single-panel expansion
-      faqItems.forEach(i => i.classList.remove("active"));
+      // Close other accordion panels for clean single-panel expansion
+      faqItems.forEach(i => {
+        i.classList.remove("active");
+        const b = i.querySelector(".faq-q");
+        if (b) b.setAttribute("aria-expanded", "false");
+      });
 
       if (!isActive) {
         item.classList.add("active");
+        btn.setAttribute("aria-expanded", "true");
       }
     });
   });
 }
 
 /* ============================================================
- * 3. MOBILE FLOATING QUICK-ACTION BUTTON
+ * 4. MOBILE FLOATING QUICK-ACTION BUTTON
  * Provides a frictionless thumb-accessible jump back to the WhatsApp list
  * ============================================================ */
 function initFloatingButton() {
