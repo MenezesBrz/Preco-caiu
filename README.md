@@ -94,3 +94,6 @@ The project is zero-dependency vanilla web technology (HTML5, CSS3, ES6+ JavaScr
    - The included `.htaccess` file activates all firewall and security rules immediately.
 3. **GitHub Pages / Cloudflare Pages**:
    - Push to a `main` or `gh-pages` branch. Enable Pages in repository settings.
+  
+
+⚠️MADE WITH AI⚠️
